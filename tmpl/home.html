@@ -1,7 +1,7 @@
 <div class="container">
 	<div class="row" id="loading-screen">
-		<div class="col s3">&nbsp</div>
-		<div class="col s6 offset-s3">
+		<div class="col m3 s1">&nbsp;</div>
+		<div class="col m6 s10">
 			<center class="loading-content">
 				Handpicking selected portfolios.<br />Please wait...<br /><br />
 				<div class="preloader-wrapper small active">
@@ -58,7 +58,7 @@
 	</div>
 	<div class="row" id="contents">
 		<div class="row">
-			<div class="input-field col s6">
+			<div class="input-field col s12 m6">
 	          	<input id="search" type="text" ng-model="searchText" ng-keyup="search()">
 	          	<label for="search">Search by title, url or tag</label>
 	        </div>
@@ -75,21 +75,21 @@
 						<div class="row">
 							<div ng-class-even="'list-item-even'" ng-class-odd="'list-item-odd'">
 								<div class="row">
-								<div class="col s1">
-									<img ng-src="{{website.favicon_image}}" class="favicon-image">
-								</div>
-								<div class="col s11">
-									<div class="row">
-										<div class="col s12">
-											<a ng-href="{{website.url_address}}" class="list-title" target="_blank">{{website.title}}</a>
+									<div class="col m1 s12">
+										<img ng-src="{{website.favicon_image}}" class="favicon-image">
+									</div>
+									<div class="col m11 s12">
+										<div class="row">
+											<div class="col s12">
+												<a ng-href="{{website.url_address}}" class="list-title" target="_blank">{{website.title}}</a>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col s12">
+												<img src="/res/images/tag.svg" class="tag-image"> <span class="list-tag">{{website.tag}}</span> &nbsp; &nbsp;<img src="/res/images/link.svg" class="tag-image"> <a ng-href="{{website.url_address}}" target="_blank" style="font-family: 'Roboto', sans-serif;">{{website.url_address}}</a>
+											</div>
 										</div>
 									</div>
-									<div class="row">
-										<div class="col s12">
-											<img src="/res/images/tag.svg" class="tag-image"> <span class="list-tag">{{website.tag}}</span> &nbsp; &nbsp;<img src="/res/images/link.svg" class="tag-image"> <a ng-href="{{website.url_address}}" target="_blank" style="font-family: 'Roboto', sans-serif;">{{website.url_address}}</a>
-										</div>
-									</div>
-								</div>
 								</div>
 							</div>
 						</div>
