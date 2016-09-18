@@ -1,0 +1,106 @@
+.navbar {
+	float: left;
+	width: 100%;
+	color: #fff;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.titlelogo {
+	float: left;
+	vertical-align: middle;
+	padding: 0px;
+	font-size: 25px;
+	margin-bottom: 0px;
+	font-family: 'Rancho', cursive;
+}
+.titlelink {
+	color: #fff;
+	vertical-align: middle;
+	float: right;
+	padding: 20px;
+	font-family: 'Varela Round', sans-serif;
+}
+.titlelink:hover {
+	background: #1976d2;
+	transition: background .3s;
+}
+#contents {
+	display: none;
+}
+.loading-content {
+	margin-top: 20px;
+	border-left: 1px solid rgba(0,0,0,0.2);
+	border-right: 1px solid rgba(0,0,0,0.2);
+	padding: 20px;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	font-family: 'Bree Serif', serif;
+}
+
+.total {
+	float: left;
+	margin-top: 10px;
+	padding: 20px;
+	width: 100%;
+	border-bottom: 1px solid #dedede;
+	font-family: 'Roboto', sans-serif;
+	color: #2e2e2e;
+}
+
+.favicon-image {
+	border-radius: 50%;
+	height: 50px;
+	vertical-align: middle;
+}
+.list-item-even {
+	padding-bottom: 10px;
+	padding-top: 10px;
+	padding-right: 20px;
+	padding-left: 20px;
+	background: -webkit-linear-gradient(left, #e8eaf6, #fff);
+    background: -o-linear-gradient(left, #e8eaf6, #fff);
+    background: -moz-linear-gradient(left, #e8eaf6, #fff);
+    background: linear-gradient(left, #e8eaf6, #fff);
+	border-bottom: 1px solid #dedede;
+	transition: all .3s;
+}
+.list-item-even:hover {
+	padding-left: 30px;
+	transition: all .3s;
+}
+.list-item-odd {
+	padding-bottom: 10px;
+	padding-top: 10px;
+	padding-right: 20px;
+	padding-left: 20px;
+	border-bottom: 1px solid #dedede;
+	transition: all .3s;
+}
+.list-item-odd:hover {
+	padding-left: 30px;
+	transition: all .3s;
+}
+.list-title {
+	color: #2e2e2e;
+	font-family: 'Bree Serif', serif;
+	font-size: 20px;
+	float: left;
+	padding-bottom: 5px;
+}
+.tag-image {
+	padding: 3px;
+	height: 20px;
+	vertical-align: middle;
+}
+.link-image {
+	padding: 3px;
+	height: 20px;
+	vertical-align: middle;
+}
+.list-tag {
+	font-family: 'Varela Round', sans-serif;
+	color: #757575;
+}
+.even {
+	background: #000;
+}

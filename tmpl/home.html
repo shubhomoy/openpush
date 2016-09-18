@@ -1,0 +1,139 @@
+<div class="container">
+	<div class="row" id="loading-screen">
+		<div class="col s3">&nbsp</div>
+		<div class="col s6 offset-s3">
+			<center class="loading-content">
+				Handpicking selected portfolios.<br />Please wait...<br /><br />
+				<div class="preloader-wrapper small active">
+			    	<div class="spinner-layer spinner-blue">
+			        	<div class="circle-clipper left">
+			          		<div class="circle"></div>
+			        	</div>
+			        	<div class="gap-patch">
+			          		<div class="circle"></div>
+			        	</div>
+			        	<div class="circle-clipper right">
+			          		<div class="circle"></div>
+			        	</div>
+			      	</div>
+
+			      	<div class="spinner-layer spinner-red">
+			        	<div class="circle-clipper left">
+			          		<div class="circle"></div>
+			        	</div>
+			        	<div class="gap-patch">
+			          		<div class="circle"></div>
+			        	</div>
+			        	<div class="circle-clipper right">
+			          		<div class="circle"></div>
+			        	</div>
+			      	</div>
+
+			      	<div class="spinner-layer spinner-yellow">
+			        	<div class="circle-clipper left">
+			          		<div class="circle"></div>
+			        	</div>
+			        	<div class="gap-patch">
+			          		<div class="circle"></div>
+			        	</div>
+			        	<div class="circle-clipper right">
+			          		<div class="circle"></div>
+			        	</div>
+			      	</div>
+
+			      	<div class="spinner-layer spinner-green">
+			        	<div class="circle-clipper left">
+			          		<div class="circle"></div>
+			        	</div>
+			        	<div class="gap-patch">
+			          		<div class="circle"></div>
+			        	</div>
+			        	<div class="circle-clipper right">
+			          		<div class="circle"></div>
+			        	</div>
+			      	</div>
+			    </div>	
+			</center>
+		</div>
+	</div>
+	<div class="row" id="contents">
+		<div class="row">
+			<div class="input-field col s6">
+	          	<input id="search" type="text" ng-model="searchText" ng-keyup="search()">
+	          	<label for="search">Search by title, url or tag</label>
+	        </div>
+		</div>
+		<div class="row">
+			<div class="col s12">
+				<span class="total">Total of {{total}} portfolios handpicked!</span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s12">
+				<ul id="responseList">
+					<li ng-repeat="website in websites | filter:searchText">
+						<div class="row">
+							<div ng-class-even="'list-item-even'" ng-class-odd="'list-item-odd'">
+								<div class="row">
+								<div class="col s1">
+									<img ng-src="{{website.favicon_image}}" class="favicon-image">
+								</div>
+								<div class="col s11">
+									<div class="row">
+										<div class="col s12">
+											<a ng-href="{{website.url_address}}" class="list-title" target="_blank">{{website.title}}</a>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col s12">
+											<img src="/res/images/tag.svg" class="tag-image"> <span class="list-tag">{{website.tag}}</span> &nbsp; &nbsp;<img src="/res/images/link.svg" class="tag-image"> <a ng-href="{{website.url_address}}" target="_blank" style="font-family: 'Roboto', sans-serif;">{{website.url_address}}</a>
+										</div>
+									</div>
+								</div>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>		
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+	    <a class="btn-floating btn-large blue darken-4 modal-trigger" href="#modal1">
+	      	<i class="large material-icons">add</i>
+	    </a>
+	</div>
+
+
+
+	<div id="modal1" class="modal">
+		<div class="modal-content">
+	    	<h5>Add your portfolio</h5>
+	      	<p>You can also add your own portfolio profile to OnePush</p>
+	      	<p>
+	      		<div class="row">
+	      			<div class="col m2">&nbsp;</div>
+	      			<div class="col m8">
+			      		<input type="text" placeholder="Title" ng-model="push_title"> <br />
+			      		<img src="/res/images/link.svg" class="tag-image"> URL
+			      		<input type="text" ng-model="push_url"> <br />
+			      		<img src="/res/images/tag.svg" class="tag-image"> Tag
+			      		<input type="text" ng-model="push_tag">
+			      	</div>
+			    </div>
+	      	</p>
+	    </div>
+	    <div class="modal-footer">
+	    	<a class=" modal-action waves-effect waves-green btn-flat" ng-click="push()">Add</a>
+	    	<a class=" modal-action modal-close waves-effect waves-green btn-flat" ng-click="closeModal()">Close</a>
+	    </div>
+	</div>
+	<div id="modal2" class="modal">
+		<div class="modal-content">
+	      	<p id="push_status">Pushing your website...</p>
+	    </div>
+	</div>
+</div>
