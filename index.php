@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Toppr</title>
+	<title>OpenPush - by Shubhomoy</title>
 	<base href="/">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
